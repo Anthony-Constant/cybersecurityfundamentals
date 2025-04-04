@@ -1,0 +1,107 @@
+/* Quiz section enhancement */
+#quizForm label {
+  display: block;
+  background: #fff;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#quizForm label:hover {
+  background-color: #f0f4f8;
+  border-color: #93c5fd;
+}
+
+#quizForm input[type="radio"] {
+  margin-right: 10px;
+}
+
+#quizResult {
+  transition: opacity 0.5s ease;
+}
+
+.animated-button-success {
+  display: inline-block;
+  background-color: #10B981; /* Emerald green */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  animation: glow-success 2.5s infinite alternate, jump 1.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+}
+
+.animated-button-success:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.9);
+}
+
+@keyframes glow-success {
+  0% { box-shadow: 0 0 0px rgba(16, 185, 129, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(16, 185, 129, 0.5); }
+}
+
+.animated-button-primary {
+  display: inline-block;
+  background-color: #3B82F6; /* Tailwind blue-500 */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  animation: glow-primary 2.5s infinite alternate, jump 1.5s ease-in-out infinite alternate;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.animated-button-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.9);
+}
+
+@keyframes glow-primary {
+  0% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+}
+
+/* Smooth fade in for results */
+#quizResult {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+#quizResult.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: soft styling for radio buttons */
+input[type="radio"] {
+  accent-color: #8b5cf6;
+  transform: scale(1.2);
+  margin-right: 0.5rem;
+}
+
+/* Button enhancement */
+.animated-button-primary {
+  transition: all 0.3s ease;
+}
+.animated-button-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+}
+
+#comingSoonMsg {
+  transition: opacity 0.5s ease-in-out;
+}
